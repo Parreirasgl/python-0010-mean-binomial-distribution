@@ -13,11 +13,12 @@ from random import randint
 number_successes = 0
 list_number_successes = []
 total_successes = 0
-number_simulations = 10000
+NUMBER_SIMULATIONS = 10000
+TRIALS = 3
 
-for i in range(number_simulations):
+for i in range(NUMBER_SIMULATIONS):
 
-    for i2 in range(3):
+    for i2 in range(TRIALS):
         random_number = randint(0, 1)
         if random_number == 1:
             number_successes += 1
@@ -28,4 +29,4 @@ for i in range(number_simulations):
 for i3 in list_number_successes:
     total_successes = total_successes + i3
 
-print(total_successes / number_simulations)
+print(total_successes / NUMBER_SIMULATIONS)
